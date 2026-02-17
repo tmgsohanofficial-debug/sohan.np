@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sohan Tamang - Digital Creator & Developer</title>
+  <meta name="description" content="Portfolio of Sohan Tamang, Digital Creator, Content Creator, and Web Developer based in Poland. Specializing in web development, UI/UX design, and creative projects.">
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="web developer, UI/UX designer, digital creator, Sohan Tamang, Poland, Nepal">
+  <meta name="author" content="Sohan Tamang">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Sohan Tamang - Digital Creator & Developer">
+  <meta property="og:description" content="Portfolio of Sohan Tamang, Digital Creator, Content Creator, and Web Developer based in Poland.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sohantamang.com">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Sohan+Tamang+Portfolio">
+  <!-- Favicon (add your own) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN (with JIT mode disabled for production-like build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Poppins', 'sans-serif'] } } }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <style>
+    /* Global Styles */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      0%, 50% { border-color: transparent; }
+      51%, 100% { border-color: currentColor; }
+    }
+    @keyframes drawLine {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes iconBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-float { animation: float ease-in-out 3s infinite; }
+    .typewriter {
+      border-right: 2px solid;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typewriter 2s steps(20) forwards, blink 0.75s step-end infinite;
+    }
+    .skill-bar-fill {
+      transition: width 1.5s ease-out;
+    }
+    .skill-bar-fill.animate { animation: drawLine 1.5s ease-out forwards; }
+    .icon-bounce:hover { animation: iconBounce 0.6s ease-in-out; }
+    .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-left {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .hero-left.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-right {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .hero-right.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    /* Glassmorphism Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* Custom Scrollbar for Webkit Browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(139, 92, 246, 0.3);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(139, 92, 246, 0.5);
+    }
+    /* Nav underline animation */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-slate-100 relative overflow-x-hidden">
+  <!-- Background Decorative Elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-[30%] right-[-50px] w-[300px] h-[300px] bg-pink-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-[20%] left-[-80px] w-[350px] h-[350px] bg-cyan-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+    <div id="particles" aria-hidden="true"></div>
+  </div>
+
+  <!-- Header with Navigation -->
+  <header class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+      Sohan Tamang
+    </h1>
+    <nav aria-label="Main navigation">
+      <ul class="flex gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#about" class="nav-link hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">About</a></li>
+        <li><a href="#skills" class="nav-link hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">Skills</a></li>
+        <li><a href="#projects" class="nav-link hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">Projects</a></li>
+        <li><a href="#contact" class="nav-link hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="hero-left space-y-6">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Sohan Tamang</span>
+        </h1>
+        <p class="text-xl text-slate-300 typewriter" id="typewriter-text">
+          Digital Creator & Web Developer
+        </p>
+        <p class="text-slate-400 max-w-md">
+          Passionate about technology, creativity, and storytelling through digital experiences. Building impactful projects that blend design and development.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#projects" class="inline-flex px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900">View Projects</a>
+          <a href="#contact" class="inline-flex px-8 py-3 border-2 border-purple-600 text-purple-400 rounded-lg font-medium hover:bg-purple-600 hover:text-white hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-right flex justify-center group">
+        <div class="relative overflow-hidden rounded-2xl">
+          <!-- Replace with hosted image URL; placeholder used for demo -->
+          <img
+            src="sohan.jpg"
+            alt="sohan tamang"
+            class="w-80 h-80 object-cover rounded-2xl shadow-2xl border-4 border-white/10 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+            loading="lazy"
+            width="320"
+            height="320"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 fade-in">About Me</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="glass p-8 rounded-xl fade-in slide-up" style="animation-delay: 0.1s;">
+          <h3 class="text-2xl font-semibold mb-4 text-purple-400">My Journey</h3>
+          <p class="text-slate-300 leading-relaxed">
+            I'm a dedicated professional based in Poland, originally from Nepal, with a strong passion for technology, creativity, and personal growth. With experience in web design and development, I specialize in creating engaging digital experiences. My goal is to contribute to innovative projects while continuously honing my skills in a dynamic environment.
+          </p>
+        </article>
+        <article class="glass p-8 rounded-xl fade-in slide-up" style="animation-delay: 0.2s;">
+          <h3 class="text-2xl font-semibold mb-4 text-blue-400">What Drives Me</h3>
+          <ul class="space-y-2 text-slate-300" role="list">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 flex-shrink-0"></i>Innovative problem-solving</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 flex-shrink-0"></i>Collaborative teamwork</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 flex-shrink-0"></i>Lifelong learning</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-20 relative z-10 bg-slate-800/30 rounded-3xl mx-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 fade-in">Skills & Expertise</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="code" class="w-6 h-6 text-purple-400 group-hover:text-purple-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">Web Development</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">HTML, CSS, JavaScript, Tailwind CSS</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full" style="width: 0%;" data-width="90%"></div>
+          </div>
+        </article>
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="palette" class="w-6 h-6 text-pink-400 group-hover:text-pink-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">UI/UX Design</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">Figma, Adobe XD, Responsive Design</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-pink-500 to-purple-500 h-2 rounded-full" style="width: 0%;" data-width="85%"></div>
+          </div>
+        </article>
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="puzzle" class="w-6 h-6 text-blue-400 group-hover:text-blue-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">Problem Solving</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">Algorithmic Thinking, Debugging</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-blue-600 to-cyan-500 h-2 rounded-full" style="width: 0%;" data-width="95%"></div>
+          </div>
+        </article>
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="message-circle" class="w-6 h-6 text-green-400 group-hover:text-green-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">Communication</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">Clear Documentation, Stakeholder Engagement</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-green-600 to-emerald-500 h-2 rounded-full" style="width: 0%;" data-width="80%"></div>
+          </div>
+        </article>
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="users" class="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">Teamwork</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">Agile Methodologies, Collaboration Tools</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-orange-600 to-amber-500 h-2 rounded-full" style="width: 0%;" data-width="88%"></div>
+          </div>
+        </article>
+        <article class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-200 fade-in group relative overflow-hidden">
+          <div class="flex items-center gap-3 mb-2">
+            <i data-lucide="book-open" class="w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors duration-200"></i>
+            <h3 class="font-semibold">Continuous Learning</h3>
+          </div>
+          <p class="text-sm text-slate-400 mb-3">Staying Updated with Tech Trends</p>
+          <div class="w-full bg-slate-700 rounded-full h-2">
+            <div class="skill-bar-fill bg-gradient-to-r from-indigo-600 to-violet-500 h-2 rounded-full" style="width: 0%;" data-width="92%"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 fade-in">Featured Projects</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="glass rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 fade-in group cursor-pointer relative">
+          <div class="h-48 bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors duration-300 relative overflow-hidden">
+            <i data-lucide="globe" class="w-16 h-16 text-purple-300 group-hover:text-purple-200 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"></i>
+            <div class="absolute inset-0 bg-white/10 group-hover:animate-pulse"></div>
+          </div>
+          <div class="p-6 transform transition-all duration-300 group-hover:translate-y-[-5px]">
+            <h3 class="text-xl font-semibold mb-2">News25Nepal Website</h3>
+            <p class="text-slate-400 mb-4">
+              Designed and developed a local news platform for Melamchi, Sindhupalchok, Nepal, delivering community updates and information.
+            </p>
+            <a href="http://news25nepal.weebly.com/" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 rounded">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <article class="glass rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-pink-500/25 transition-all duration-200 fade-in group cursor-pointer relative">
+          <div class="h-48 bg-gradient-to-br from-pink-500/20 to-purple-500/20 flex items-center justify-center group-hover:bg-pink-500/30 transition-colors duration-300 relative overflow-hidden">
+            <i data-lucide="monitor" class="w-16 h-16 text-pink-300 group-hover:text-pink-200 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"></i>
+            <div class="absolute inset-0 bg-white/10 group-hover:animate-pulse"></div>
+          </div>
+          <div class="p-6 transform transition-all duration-300 group-hover:translate-y-[-5px]">
+            <h3 class="text-xl font-semibold mb-2">Personal Portfolio</h3>
+            <p class="text-slate-400 mb-4">
+              A modern, responsive portfolio showcasing skills and projects, built with HTML, CSS, JavaScript, and Tailwind CSS.
+            </p>
+            <a href="#" class="text-purple-400 hover:underline flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 rounded">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+        <article class="glass rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-200 fade-in group cursor-pointer relative">
+          <div class="h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300 relative overflow-hidden">
+            <i data-lucide="video" class="w-16 h-16 text-blue-300 group-hover:text-blue-200 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"></i>
+            <div class="absolute inset-0 bg-white/10 group-hover:animate-pulse"></div>
+          </div>
+          <div class="p-6 transform transition-all duration-300 group-hover:translate-y-[-5px]">
+            <h3 class="text-xl font-semibold mb-2">Content Creation Platform</h3>
+            <p class="text-slate-400 mb-4">
+              Integrated social media and dynamic elements for a digital content hub, enhancing user engagement and storytelling.
+            </p>
+            <a href="https://www.youtube.com/@sohantamang" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 rounded">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 fade-in">Let's Connect</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+      </div>
+      <article class="glass max-w-2xl mx-auto p-8 rounded-xl fade-in">
+        <p class="text-center text-slate-300 mb-6">
+          Interested in collaborating? Reach out for opportunities in web development, content creation, or creative projects.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div>
+            <p class="text-sm text-slate-400 mb-2">Email</p>
+            <a href="mailto:lamasohan98@gmail.com" class="text-purple-400 hover:underline focus:outline-none focus:ring-2 focus:ring-purple-400 rounded">lamasohan98@gmail.com</a>
+          </div>
+          <div>
+            <p class="text-sm text-slate-400 mb-2">Phone</p>
+            <a href="tel:+48732878474" class="text-purple-400 hover:underline focus:outline-none focus:ring-2 focus:ring-purple-400 rounded">+48 732 878 474</a>
+          </div>
+        </div>
+        <ul class="flex justify-center gap-6" role="list">
+          <li><a href="mailto:lamasohan98@gmail.com" aria-label="Email Sohan Tamang" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="mail" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="github" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="linkedin" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+          <li><a href="https://www.facebook.com/sohantmgofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="facebook" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+          <li><a href="https://www.youtube.com/@sohantamang" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="youtube" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+          <li><a href="https://www.instagram.com/sohantamngofficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="icon-bounce p-3 border border-slate-600 rounded-lg hover:border-purple-600 hover:bg-purple-600/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400"><i data-lucide="instagram" class="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-colors"></i></a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500 relative z-10">
+    <p>&copy; 2026 Sohan Tamang. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+
+    // Typewriter Effect for Hero Subtitle
+    const typewriterText = document.getElementById('typewriter-text');
+    if (typewriterText) {
+      const text = typewriterText.textContent;
+      typewriterText.textContent = '';
+      let i = 0;
+      const type = () => {
+        if (i < text.length) {
+          typewriterText.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, 100);
+        } else {
+          typewriterText.classList.remove('typewriter');
+        }
+      };
+      setTimeout(type, 500); // Delay start
+    }
+
+    // Subtle Particle Background
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        const size = Math.random() * 3 + 1;
+        particle.className = 'absolute rounded-full animate-float bg-white/20';
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.animationDelay = `${Math.random() * 3}s`;
+        particle.style.animationDuration = `${Math.random() * 6 + 4}s`;
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Skill Bar Animations
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.getAttribute('data-width');
+          bar.style.width = width;
+          bar.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => skillObserver.observe(bar));
+
+    // Fade-in Animation Observer with Stagger
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Optimize: observe once
+        }
+      });
+    }, observerOptions);
+
+    fadeIns.forEach(el => observer.observe(el));
+
+    // Hero Staggered Animation on Load
+    window.addEventListener('load', () => {
+      const heroLeft = document.querySelector('.hero-left');
+      const heroRight = document.querySelector('.hero-right');
+      if (heroLeft) heroLeft.classList.add('visible');
+      if (heroRight) {
+        setTimeout(() => heroRight.classList.add('visible'), 200);
+      }
+    });
+
+    // Smooth Internal Link Handling (prevent default jump)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+```
